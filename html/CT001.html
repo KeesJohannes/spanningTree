@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.min.js"></script> -->
+
+  <link rel="stylesheet" type="text/css" href="../scripts/style.css">
+  <meta charset="utf-8">
+</head>
+
+<body onload="drawcluster('clustertable','svgplaats','clustergroepen')">
+  <script language="javascript" type="text/javascript" src="../scripts/spanningTree.js"></script>
+  <script language="javascript" type="text/javascript" src="../scripts/utilities.js"></script>
+
+  <table id="t01">
+    <thead>
+      <tr>
+        <th>
+          Minimum Spanning Network of Cluster CT001
+        </th>
+        <th>
+          Distance Matrix of Cluster CT001
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td width="75%">
+          <p id="svgplaats"></p>
+        </td>
+        <td>
+          <table id="clustertable" border="1" >
+            <thead>
+              <tr>
+                <th id="\&quot;tableHTML_header_1\&quot;"> </th>
+                <th id="\&quot;tableHTML_header_2\&quot;">001</th>
+                <th id="\&quot;tableHTML_header_3\&quot;">002</th>
+                <th id="\&quot;tableHTML_header_4\&quot;">003</th>
+                <th id="\&quot;tableHTML_header_5\&quot;">004</th>
+                <th id="\&quot;tableHTML_header_6\&quot;">005</th>
+                <th id="\&quot;tableHTML_header_7\&quot;">006</th>
+                <th id="\&quot;tableHTML_header_8\&quot;">007</th>
+                <th id="\&quot;tableHTML_header_9\&quot;">008</th>
+                <th id="\&quot;tableHTML_header_10\&quot;">009</th>
+                <th id="\&quot;tableHTML_header_11\&quot;">010</th>
+                <th id="\&quot;tableHTML_header_12\&quot;">011</th>
+                <th id="\&quot;tableHTML_header_13\&quot;">012</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">001.TST0001</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">7</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">002.TST0002</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">8</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">003.TST0003</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">9</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">004.TST0004</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">10</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">005.TST0005</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">8</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">006.TST0006</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">8</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">007.TST0007</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">6</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">008.TST0008</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">8</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">7</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">009.TST0009</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">8</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">010.TST0010</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">4</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">1</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">9</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">011.TST0011</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">5</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">8</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">3</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">2</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">0</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">11</td>
+              </tr>
+              <tr>
+                <td id="\&quot;tableHTML_rownames\&quot;">012.TST0012</td>
+                <td id="\&quot;tableHTML_column_1\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_2\&quot;">8</td>
+                <td id="\&quot;tableHTML_column_3\&quot;">9</td>
+                <td id="\&quot;tableHTML_column_4\&quot;">10</td>
+                <td id="\&quot;tableHTML_column_5\&quot;">8</td>
+                <td id="\&quot;tableHTML_column_6\&quot;">8</td>
+                <td id="\&quot;tableHTML_column_7\&quot;">6</td>
+                <td id="\&quot;tableHTML_column_8\&quot;">7</td>
+                <td id="\&quot;tableHTML_column_9\&quot;">8</td>
+                <td id="\&quot;tableHTML_column_10\&quot;">9</td>
+                <td id="\&quot;tableHTML_column_11\&quot;">11</td>
+                <td id="\&quot;tableHTML_column_12\&quot;">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="clustergroepen" hidden>
+    <thead>
+      <tr>
+        <th>Cluster</th>
+        <th>Groep</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>004</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>005</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>006</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>007</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>008</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>009</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>010</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>011</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>012</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

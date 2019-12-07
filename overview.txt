@@ -1,0 +1,49 @@
+spanningTree: 
+    drawcluster()
+        dothedrawing();
+    
+    dothedrawing() {
+        getTable(); 
+        readTable(at);
+            zeroCostRemoval();
+        makespanningtree();
+        longestpad() 
+            spreadInwards()
+            detMaxHop()
+            calcMainPath()
+        minEdges();
+            makeFakeEdge()
+        makeForest(); 
+            buildTree()
+        buildTriangles()
+            combineTriangles()
+            translateTriangles()
+            rotateTrianglesOmNul()
+        setXY();
+        normalize();
+        makesvg();
+
+utilities:
+    mymap()
+    vt()
+    rotateom()
+    rotateomnul()
+    rotateTriangles()
+        rotateom()
+    rotateTrianglesOmNul()
+        rotateomnul()
+    translateTriangles()
+    between()
+    snijdenelkaar()
+    lijnsnijdtcircle()
+
+    class knoop
+    class edge
+    class mVector
+    createmVector()
+    class triangle()
+    class svg
+    add()
+    f2()
+    ShowLine()
+    ShowMe()

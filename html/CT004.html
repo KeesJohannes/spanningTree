@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.min.js"></script> -->
+
+  <link rel="stylesheet" type="text/css" href="../scripts/style.css">
+  <meta charset="utf-8">
+</head>
+
+<body onload="drawcluster('clustertable','svgplaats','clustergroepen')">
+  <script language="javascript" type="text/javascript" src="../scripts/spanningTree.js" defer></script>
+  <script language="javascript" type="text/javascript" src="../scripts/utilities.js"></script>
+
+  <table id="t01">
+    <tr>
+      <th>
+        Minimum Spanning Network of  Cluster CT004
+      </th>
+      <th>
+        Distance Matrix of  Cluster CT004
+      </th>
+    </tr>
+    <tr>
+      <td width="75%">
+        <p id="svgplaats"></p>
+      </td>
+      <td>
+        <table id="clustertable" border="1">
+          <thead>
+            <tr>
+              <th id="\&quot;tableHTML_header_1\&quot;"> </th>
+              <th id="\&quot;tableHTML_header_2\&quot;">001</th>
+              <th id="\&quot;tableHTML_header_3\&quot;">002</th>
+              <th id="\&quot;tableHTML_header_4\&quot;">003</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="\&quot;tableHTML_rownames\&quot;">001.TST0001</td>
+              <td id="\&quot;tableHTML_column_1\&quot;">0</td>
+              <td id="\&quot;tableHTML_column_2\&quot;">15</td>
+              <td id="\&quot;tableHTML_column_3\&quot;">15</td>
+            </tr>
+            <tr>
+              <td id="\&quot;tableHTML_rownames\&quot;">002.TST0002</td>
+              <td id="\&quot;tableHTML_column_1\&quot;">15</td>
+              <td id="\&quot;tableHTML_column_2\&quot;">0</td>
+              <td id="\&quot;tableHTML_column_3\&quot;">12</td>
+            </tr>
+            <tr>
+              <td id="\&quot;tableHTML_rownames\&quot;">003.TST0003</td>
+              <td id="\&quot;tableHTML_column_1\&quot;">15</td>
+              <td id="\&quot;tableHTML_column_2\&quot;">12</td>
+              <td id="\&quot;tableHTML_column_3\&quot;">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table id="clustergroepen" hidden>
+    <thead>
+      <tr>
+        <th>Cluster</th>
+        <th>Groep</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
